@@ -94,7 +94,7 @@ Severity is `bug` | `security` | `convention` | `breaking`. End with a one-line 
 <!--
 TODO: Write at least TWO concrete input/output examples using the format above.
 
-Per Task 3.5, examples are the difference between a command that produces
+Examples are the difference between a command that produces
 consistent output across team members and one that produces wildly varying output.
 
 Example 1 — INDEPENDENT findings. Show a diff with two unrelated convention

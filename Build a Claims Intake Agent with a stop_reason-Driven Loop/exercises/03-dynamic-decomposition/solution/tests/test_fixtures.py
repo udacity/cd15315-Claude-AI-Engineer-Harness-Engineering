@@ -41,8 +41,8 @@ def test_fixture_outcome_distribution_meets_targets() -> None:
     fixtures = _load_fixtures()
     routed = [f for f in fixtures if f["expected_outcome"] == "routed"]
     escalated = [f for f in fixtures if f["expected_outcome"] == "escalated"]
-    assert len(routed) >= 6, "AC-05.5: at least 6 fixtures must terminate in routing"
-    assert len(escalated) >= 1, "AC-05.5: at least 1 fixture must terminate in escalation"
+    assert len(routed) >= 6, "at least 6 fixtures must terminate in routing"
+    assert len(escalated) >= 1, "at least 1 fixture must terminate in escalation"
 
 
 def test_routed_fixtures_cover_all_four_types_and_all_severities() -> None:
@@ -50,7 +50,7 @@ def test_routed_fixtures_cover_all_four_types_and_all_severities() -> None:
     types = {f["expected_type"] for f in routed}
     sevs = {f["expected_severity"] for f in routed}
     assert EXPECTED_CLAIM_TYPES.issubset(types), f"missing routed types: {EXPECTED_CLAIM_TYPES - types}"
-    assert EXPECTED_SEVERITIES.issubset(sevs), f"missing severities (AC-05.6): {EXPECTED_SEVERITIES - sevs}"
+    assert EXPECTED_SEVERITIES.issubset(sevs), f"missing severities: {EXPECTED_SEVERITIES - sevs}"
 
 
 def test_fixture_schemas_are_consistent() -> None:
@@ -80,4 +80,4 @@ def test_claim_06_is_the_escalation_fixture() -> None:
     """claim_06 is referenced by name; lock it in."""
     fx = json.loads((FIXTURE_DIR / "claim_06_low_confidence_escalation.json").read_text())
     assert fx["expected_outcome"] == "escalated"
-    assert fx["clarification_responses"], "claim_06 must provide clarification responses (AC-04.2)"
+    assert fx["clarification_responses"], "claim_06 must provide clarification responses"

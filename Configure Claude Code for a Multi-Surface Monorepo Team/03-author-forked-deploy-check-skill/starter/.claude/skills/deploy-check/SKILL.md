@@ -55,9 +55,11 @@ TODO: Write the rationale paragraph for `context: fork`. It MUST do two things:
       structured summary should return to the main conversation.
 
   (b) Note that `context: fork` is a Claude Code PRODUCT FEATURE operating at the
-      skill-invocation layer, conceptually analogous to the Architect's Playbook
-      *Branching Reality* pattern (which describes session-level forking via
-      `fork_session`). Mention both so a reader who knows the Playbook can map the
+      skill-invocation layer, conceptually analogous to the *Branching Reality*
+      pattern: establish a shared starting point, then branch into isolated
+      explorations whose working output never flows back into the parent.
+      Session-level forking (`fork_session`) applies the same pattern to a whole
+      session. Name the pattern so a reader who knows session forking can map the
       mental model.
 -->
 

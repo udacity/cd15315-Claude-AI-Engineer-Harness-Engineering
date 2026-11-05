@@ -73,7 +73,7 @@ def has_direct_execution_example(doc_path: Path) -> DirectExecutionSection:
     section = _section(doc_path, r"direct[- ]?execution")
     if section is None:
         return DirectExecutionSection(found=False, is_single_function=False)
-    # The PRD requires a "well-scoped single-function" change. The prose mention is the
+    # The exercise requires a "well-scoped single-function" change. The prose mention is the
     # real signal; we don't care whether the example incidentally name-drops a schema
     # file alongside the function's home file.
     mentions_single = bool(re.search(r"\bone\s+(function|handler|check|line)\b", section, re.I))

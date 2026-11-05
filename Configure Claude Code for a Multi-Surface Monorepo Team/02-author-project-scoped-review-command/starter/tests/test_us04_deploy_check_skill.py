@@ -64,7 +64,7 @@ def test_ac_04_05_rationale_cites_main_session_and_branching_reality(
     )
     assert body_has_branching_reality_note(skill.body), (
         "Rationale must note context: fork is a Claude Code product feature analogous to "
-        "the Playbook Branching Reality pattern"
+        "the Branching Reality pattern"
     )
 
 
