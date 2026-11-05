@@ -49,13 +49,13 @@ def test_ac_05_04_explore_example_with_scratchpad(doc_path: Path) -> None:
         "Explore example must reference isolating verbose discovery output"
     )
     assert section.cites_scratchpad, (
-        "Explore example must reference the scratchpad pattern (Playbook)"
+        "Explore example must reference the scratchpad pattern"
     )
 
 
 def test_ac_05_05_knight_webb_curriculum_citation(doc_path: Path) -> None:
     assert has_knight_webb_curriculum_citation(doc_path), (
-        "Doc must cite Knight-Webb 'SWE Is Becoming Plan and Review' sourced via curriculum"
+        "Doc must cite the Knight-Webb 'SWE Is Becoming Plan and Review' anchor talk"
     )
 
 

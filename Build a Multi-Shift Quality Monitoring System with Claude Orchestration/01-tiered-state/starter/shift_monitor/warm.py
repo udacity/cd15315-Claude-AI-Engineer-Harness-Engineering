@@ -7,12 +7,14 @@ from collections.abc import Iterable, Mapping
 from pathlib import Path
 from typing import Any
 
-# TODO: Build the schema. Two pieces matter:
+# TODO: Build the schema. Three pieces matter:
 #   1. A `defects` table with columns
 #      (id TEXT PRIMARY KEY, ts TEXT NOT NULL, shift TEXT NOT NULL,
 #       component TEXT NOT NULL, severity TEXT NOT NULL, description TEXT NOT NULL).
 #   2. A named index `idx_defects_shift_ts` on `(shift, ts)`.
-#   A second index on `(ts)` alone is useful but optional.
+#   3. A named index `idx_defects_ts` on `(ts)`. `defects_since` filters on `ts`
+#      without naming a `shift`, so this is the index SQLite can use for it.
+#      Without it the query plan is a full `SCAN defects` and the index test fails.
 SCHEMA_SQL = """
 """
 
