@@ -81,7 +81,7 @@ python -m retail_context.run --all
 python -m retail_context.run --build
 
 # Try a stronger summarization model:
-python -m retail_context.run --all --model claude-sonnet-4-6
+python -m retail_context.run --all --model claude-sonnet-4-5-20250929
 ```
 
 Artifacts land in `runs/<run_id>/`:
