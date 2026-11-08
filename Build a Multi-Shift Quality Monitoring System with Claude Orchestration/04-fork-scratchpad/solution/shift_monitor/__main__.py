@@ -6,13 +6,15 @@ import argparse
 import json
 import logging
 import sys
-from datetime import UTC, datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from . import pipeline
 from .client import AnthropicClaudeClient, ClaudeClient, RecordedClaudeClient
 from .state import HotState
 from .warm import WarmStore
+
+UTC = timezone.utc
 
 
 def _default_since() -> str:

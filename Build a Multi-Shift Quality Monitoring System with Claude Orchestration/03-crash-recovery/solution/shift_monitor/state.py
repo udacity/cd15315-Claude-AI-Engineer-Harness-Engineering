@@ -5,9 +5,9 @@ from __future__ import annotations
 import os
 import tempfile
 from pathlib import Path
-from typing import Self
 
 from pydantic import BaseModel, ConfigDict, Field
+from typing_extensions import Self
 
 MAX_RECENT_HASHES = 20
 HOT_STATE_BYTE_BUDGET = 5_120
