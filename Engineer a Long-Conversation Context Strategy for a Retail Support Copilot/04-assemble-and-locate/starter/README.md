@@ -3,7 +3,7 @@
 **Course:** Claude Certified Architect — Foundations / Course 1, Harness Engineering
 **Module:** 2 — Context Engineering Foundations
 **Status:** Starter scaffold — implement the TODO-marked sections (reference solution in `../solution/`)
-**Build:** Python 3.11+, `anthropic` SDK, runs in Docker with `$ANTHROPIC_API_KEY`
+**Build:** Python 3.10+, `anthropic` SDK, runs in Docker with `$ANTHROPIC_API_KEY`
 
 This is the starter scaffold — you fill in the TODO-marked sections; the reference solution lives in `../solution/`. The system designs a context-management strategy for a 48-turn retail customer-support conversation that spans three issues — a refund inquiry (resolved), a subscription cancellation (resolved), and a payment-method update (active). The raw transcript is ~35,000 tokens; the assembled context is **the project's measurable output**, recorded in `runs/<run_id>/context.md` alongside `budget.json` (token accounting) and `eval.jsonl` (evaluation results against the compressed context).
 
@@ -81,7 +81,7 @@ python -m retail_context.run --all
 python -m retail_context.run --build
 
 # Try a stronger summarization model:
-python -m retail_context.run --all --model claude-sonnet-4-6
+python -m retail_context.run --all --model claude-sonnet-4-5-20250929
 ```
 
 Artifacts land in `runs/<run_id>/`:
