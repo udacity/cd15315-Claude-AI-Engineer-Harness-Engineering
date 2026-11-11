@@ -35,7 +35,8 @@ def get_client() -> anthropic.Anthropic:
 
 
 def get_model() -> str:
-    return os.environ.get("CLAUDE_MODEL", DEFAULT_MODEL)
+    """`CLAUDE_MODEL` if set, else the lab's `ANTHROPIC_MODEL`, else DEFAULT_MODEL."""
+    return os.environ.get("CLAUDE_MODEL") or os.environ.get("ANTHROPIC_MODEL") or DEFAULT_MODEL
 
 
 def set_model(model: str) -> None:

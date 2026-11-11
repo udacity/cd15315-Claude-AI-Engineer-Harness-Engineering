@@ -17,3 +17,12 @@ def make_client() -> Anthropic:
 
 
 DEFAULT_MODEL = "claude-haiku-4-5-20251001"
+
+
+def default_model() -> str:
+    """The model a run uses when no --model is given.
+
+    `CLAUDE_MODEL` wins if it is set; otherwise `ANTHROPIC_MODEL`, which Udacity's
+    labs set to a model their key accepts; otherwise DEFAULT_MODEL.
+    """
+    return os.environ.get("CLAUDE_MODEL") or os.environ.get("ANTHROPIC_MODEL") or DEFAULT_MODEL

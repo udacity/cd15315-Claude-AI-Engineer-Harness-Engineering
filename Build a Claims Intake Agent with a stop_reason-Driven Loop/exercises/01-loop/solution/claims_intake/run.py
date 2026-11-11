@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from claims_intake.budget import Budget, BudgetExceeded
-from claims_intake.client import DEFAULT_MODEL, make_client
+from claims_intake.client import default_model, make_client
 from claims_intake.loop import FinalState, UnexpectedStopReason
 from claims_intake.loop import run as run_loop
 from claims_intake.pricing import estimate_cost_usd
@@ -187,7 +187,7 @@ def main(argv: list[str] | None = None) -> int:
         metavar="NAME",
         help="Process one fixture, e.g. --fixture claim_03_water_damage",
     )
-    parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument("--model", default=default_model())
     parser.add_argument("--max-input-tokens", type=int, default=500_000)
     parser.add_argument("--max-wall-clock-s", type=float, default=180.0)
     args = parser.parse_args(argv)

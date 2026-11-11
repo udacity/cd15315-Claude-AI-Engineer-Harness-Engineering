@@ -108,8 +108,9 @@ python -m retail_context.run --all
 # Build the assembled context only (no eval calls):
 python -m retail_context.run --build
 
-# Try a stronger summarization model:
-python -m retail_context.run --all --model claude-sonnet-4-5-20250929
+# Try a stronger summarization model (any model id your key accepts; in a
+# Udacity lab, `echo $ANTHROPIC_MODELS` lists them):
+python -m retail_context.run --all --model <model-id>
 ```
 
 Artifacts land in `runs/<run_id>/`:

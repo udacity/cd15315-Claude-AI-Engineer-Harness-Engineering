@@ -4,7 +4,7 @@ Usage:
     python -m retail_context.run --all
     python -m retail_context.run --eval
     python -m retail_context.run --build         # build context.md only (no eval)
-    python -m retail_context.run --eval --model claude-sonnet-4-5-20250929
+    python -m retail_context.run --eval --model <model-id>
 
 Outputs (under runs/<run_id>/):
     context.md                — the assembled context
