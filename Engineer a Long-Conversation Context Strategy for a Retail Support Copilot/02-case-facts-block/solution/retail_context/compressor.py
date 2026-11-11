@@ -50,7 +50,7 @@ def summarize_segment(segment: Segment, *, model: str | None = None) -> Summary:
     #        f"Source segment — issue_id `{segment.issue_id}`, turns "
     #        f"{segment.turn_range[0]}-{segment.turn_range[1]}:\n\n{segment.text}"
     #
-    # 4. Call complete_with_system(system, user, model=model, max_tokens=1024).
+    # 4. Call complete_with_system(system, user, model=model, max_tokens=2048).
     #    It returns a (text, input_tokens, output_tokens) tuple.
     #
     # 5. Return a Summary carrying the issue_id, the response text (the

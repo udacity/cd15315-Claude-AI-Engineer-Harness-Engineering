@@ -38,10 +38,15 @@ class RecordedClaudeClient:
 class AnthropicClaudeClient:
     """Production client using the Anthropic SDK. Requires ANTHROPIC_API_KEY in env.
 
-    The `CLAUDE_MODEL` env var overrides the default model.
+    The model is `CLAUDE_MODEL` if set, else the lab's `ANTHROPIC_MODEL`, else
+    DEFAULT_MODEL.
     """
 
-    model: str = field(default_factory=lambda: os.environ.get("CLAUDE_MODEL", DEFAULT_MODEL))
+    model: str = field(
+        default_factory=lambda: (
+            os.environ.get("CLAUDE_MODEL") or os.environ.get("ANTHROPIC_MODEL") or DEFAULT_MODEL
+        )
+    )
     max_tokens: int = 1024
     _client: object | None = field(default=None, init=False, repr=False)
 
