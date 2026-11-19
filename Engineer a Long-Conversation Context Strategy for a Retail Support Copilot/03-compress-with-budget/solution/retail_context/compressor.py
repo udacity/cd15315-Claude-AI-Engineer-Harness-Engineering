@@ -46,7 +46,7 @@ def summarize_segment(segment: Segment, *, model: str | None = None) -> Summary:
         f"{segment.turn_range[0]}–{segment.turn_range[1]}:\n\n{segment.text}"
     )
     text, in_tok, out_tok = complete_with_system(
-        system, user, model=model, max_tokens=1024
+        system, user, model=model, max_tokens=2048
     )
     return Summary(
         issue_id=segment.issue_id,

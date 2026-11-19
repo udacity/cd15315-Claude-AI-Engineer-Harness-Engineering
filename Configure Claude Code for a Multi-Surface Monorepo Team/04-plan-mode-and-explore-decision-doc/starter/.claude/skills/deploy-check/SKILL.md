@@ -30,7 +30,7 @@ The opposite shape — always-loaded, universal guidance like "tests are co-loca
 
 The goal of the fork is to keep the verbose discovery output **out of the main session**. A deploy check walks the working tree, inspects diffs, and runs several enumeration passes — none of that intermediate output has any value to the calling session once we know whether to ship. By running in a forked sub-agent, only the structured summary returns to the main conversation; the megabytes of file lists and `git status` output stay in the fork.
 
-`context: fork` is a Claude Code product feature operating at the skill-invocation layer. Conceptually it is analogous to the Architect's Playbook **Branching Reality** pattern — establish a foundational analysis, then branch into isolated explorations whose outputs do not contaminate the parent — but the Playbook describes session-level forking via `fork_session`, whereas `context: fork` is the skill-spec equivalent.
+`context: fork` is a Claude Code product feature operating at the skill-invocation layer. Conceptually it is analogous to the **Branching Reality** pattern — establish a foundational analysis, then branch into isolated explorations whose outputs do not contaminate the parent. Session-level forking (`fork_session`) applies that pattern to a whole session; `context: fork` is the skill-spec equivalent.
 
 ## Checks
 

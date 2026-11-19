@@ -43,7 +43,7 @@ If you want to exercise the live compression and budget emission end-to-end (one
 ANTHROPIC_API_KEY=sk-ant-... python -m retail_context.run --build
 ```
 
-`--build` will run through case-facts extraction, compression, and budget emission — **but the assembly step itself is Exercise 4**, so the run terminates with `NotImplementedError` inside `assemble.build()`. To exercise just compression and budget without assembly, check `runs/<id>/budget.json` was written (this happens before `assemble.build` is called in the current `_build` flow if you wrote the budget block to emit *before* calling `build_context`).
+`--build` runs case-facts extraction and compression, then stops with `NotImplementedError` inside `assemble.build()`: **the assembly step is Exercise 4**. It doesn't reach `budget.json` either, because the budget's per-section numbers come from the assembled context (`assembled.section_tokens()`). The full `--build` run, `budget.json` included, works in Exercise 4's folder (`04-assemble-and-locate`), where you write the assembly.
 
 If you'd rather verify the compression output without touching assembly at all, run this one-liner with `ANTHROPIC_API_KEY` set:
 

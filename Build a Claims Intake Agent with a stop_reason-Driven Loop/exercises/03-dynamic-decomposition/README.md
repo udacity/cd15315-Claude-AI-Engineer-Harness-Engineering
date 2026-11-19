@@ -73,7 +73,7 @@ pytest tests/ -v
 
 ### Stretch Challenges (Optional)
 
-- Add a `--interactive` mode to `run.py` that takes claimant input from stdin instead of fixtures (the open question OQ-4 in the PRD).
+- Add a `--interactive` mode to `run.py` that takes claimant input from stdin instead of fixtures.
 - Cap `request_clarification` at 3 per claim via a session-level counter so the model cannot loop on clarifications. (Note: this is *not* an anti-pattern because it is a session-state guard, not a control-flow signal — the loop still exits on `stop_reason`.)
 
 ---

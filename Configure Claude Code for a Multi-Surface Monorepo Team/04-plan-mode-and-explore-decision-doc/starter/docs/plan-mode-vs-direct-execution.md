@@ -3,13 +3,14 @@
 Choosing between Claude Code's **plan mode** (investigate and propose before changing anything) and **direct execution** (change code immediately) is the single biggest leverage point in how the team uses the harness day-to-day. The wrong mode at either extreme costs us: plan mode for trivial fixes is friction; direct execution for architectural changes burns context and produces rework.
 
 <!--
-TODO: Add a blockquote citation for the Knight-Webb "SWE Is Becoming Plan and Review"
-      anchor talk that frames this decision.
+TODO: Replace this comment with a blockquote citation for the Knight-Webb
+      "SWE Is Becoming Plan and Review" anchor talk that frames this decision,
+      for example:
 
-      IMPORTANT: source the citation from the Module 8 curriculum doc's anchor-talks
-      table. Do NOT cite the Architect's Playbook — the Playbook contains zero
-      plan-mode content and citing it would be a fabrication. The Knight-Webb talk
-      lives in the curriculum doc, not the Playbook.
+        > Anchor talk: Knight-Webb, "SWE Is Becoming Plan and Review."
+
+      The validator checks that the citation names the speaker (Knight-Webb), the
+      talk title, and the words "anchor talk".
 -->
 
 This doc walks four concrete decisions against our codebase: one plan-mode example, one direct-execution example, one Explore-subagent example, and one combined-workflow example.
@@ -29,8 +30,8 @@ TODO: Write a plan-mode worked example against this codebase. Requirements:
       - src/components/MiniCart/MiniCart.tsx
     (All three exist in this repo — confirm before referencing.)
 
-  - State the reasoning that maps to Task 3.4: large-scale changes, multiple
-    valid approaches, architectural decisions, multi-file modifications.
+  - State the reasoning that uses the plan-mode criteria: large-scale changes,
+    multiple valid approaches, architectural decisions, multi-file modifications.
 
   - EXPLICITLY cite "prevent costly rework" (or equivalent phrasing) as the value
     of planning before committing. This is the Knight-Webb principle.
@@ -54,7 +55,8 @@ TODO: Write a direct-execution worked example. Requirements:
       - src/api/orders/handler.ts (or src/api/_schemas/orders.ts)
     Confirm the file exists before referencing it.
 
-  - State the reasoning that maps to Task 3.4: simple, well-scoped changes.
+  - State the reasoning that uses the direct-execution criterion: simple,
+    well-scoped changes.
 
   - Convey the bar for "direct execution": you (the author) already know what
     the diff looks like before invoking Claude. If you can describe the change
@@ -73,10 +75,10 @@ TODO: Write an Explore-subagent worked example. Requirements:
     src/api/billing/issue.ts, and src/services/payment.ts. Confirm the files
     and the call sites exist before referencing them.
 
-  - State the reasoning that maps to Task 3.4: isolating verbose discovery output
-    and returning summaries to preserve main conversation context.
+  - State the reasoning that uses the Explore criterion: isolating verbose
+    discovery output and returning summaries to preserve main conversation context.
 
-  - REFERENCE THE SCRATCHPAD PATTERN (Architect's Playbook). The Explore sub-agent
+  - REFERENCE THE SCRATCHPAD PATTERN. The Explore sub-agent
     should write its working notes to a scratchpad file (e.g. tmp/refund-callsites.md)
     so the inventory survives the main session's context window. Name it
     explicitly — "scratchpad pattern" should appear in your text.
@@ -104,8 +106,8 @@ TODO: Write a combined-workflow worked example. This is the most subtle of the
         Once the call-site list is in hand, the rename itself is mechanical:
         direct execution.
 
-      - State the reasoning that maps to Task 3.4: "Combining plan mode for
-        investigation with direct execution for implementation."
+      - State the reasoning: "Combining plan mode for investigation with
+        direct execution for implementation."
 
       - Show the flow as a 3-step sequence: (1) plan mode investigates and
         proposes; (2) you approve the plan; (3) direct execution applies the
