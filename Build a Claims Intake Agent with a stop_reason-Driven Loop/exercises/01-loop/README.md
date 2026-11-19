@@ -42,11 +42,11 @@ The loop you write here is the artifact every later stage extends — context en
 
 ### Instructions
 
-- [ ] Open `starter/claims_intake/loop.py` and read the function signature and the existing scaffold above the TODO.
-- [ ] Build the per-turn trace record (`turn`, `stop_reason`, `tool_calls`, `latency_ms`, `input_tokens`, `output_tokens`) and call `tracer.write(...)`.
-- [ ] Handle the `end_turn` case: append the assistant turn to `working_messages`, return a `FinalState`.
-- [ ] Handle the `tool_use` case: append the assistant turn, then for every `tool_use` block call `tool_executor(name, input)`, collect the results into matching `tool_result` blocks, append a *single* user turn containing all of them, and `continue` the loop.
-- [ ] Raise `UnexpectedStopReason` for anything else.
+- [x] Open `starter/claims_intake/loop.py` and read the function signature and the existing scaffold above the TODO.
+- [x] Build the per-turn trace record (`turn`, `stop_reason`, `tool_calls`, `latency_ms`, `input_tokens`, `output_tokens`) and call `tracer.write(...)`.
+- [x] Handle the `end_turn` case: append the assistant turn to `working_messages`, return a `FinalState`.
+- [x] Handle the `tool_use` case: append the assistant turn, then for every `tool_use` block call `tool_executor(name, input)`, collect the results into matching `tool_result` blocks, append a *single* user turn containing all of them, and `continue` the loop.
+- [x] Raise `UnexpectedStopReason` for anything else.
 
 ### Verify
 

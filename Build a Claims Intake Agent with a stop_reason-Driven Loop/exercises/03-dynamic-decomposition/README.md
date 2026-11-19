@@ -49,10 +49,10 @@ When you open `runs/<ts>/traces/claim_03_water_damage.jsonl` and see a `request_
 
 ### Instructions
 
-- [ ] Add the three remaining schemas to `TOOL_SCHEMAS` in `starter/claims_intake/tools.py`.
-- [ ] Implement `_t_request_clarification`, `_t_route_to_adjuster`, `_t_escalate_to_human` per the TODO comments in `tools.py`.
-- [ ] Write `SYSTEM_PROMPT` in `starter/claims_intake/system_prompt.py` covering the claim types, severity buckets, the clarification rule, and the terminal choice.
-- [ ] In `starter/claims_intake/run.py`, wire `clarification_responses=fixture.get("clarification_responses", {})` into the `ClaimSession(...)` call.
+- [x] Add the three remaining schemas to `TOOL_SCHEMAS` in `starter/claims_intake/tools.py`.
+- [x] Implement `_t_request_clarification`, `_t_route_to_adjuster`, `_t_escalate_to_human` per the TODO comments in `tools.py`.
+- [x] Write `SYSTEM_PROMPT` in `starter/claims_intake/system_prompt.py` covering the claim types, severity buckets, the clarification rule, and the terminal choice.
+- [x] In `starter/claims_intake/run.py`, wire `clarification_responses=fixture.get("clarification_responses", {})` into the `ClaimSession(...)` call.
 
 ### Verify
 
