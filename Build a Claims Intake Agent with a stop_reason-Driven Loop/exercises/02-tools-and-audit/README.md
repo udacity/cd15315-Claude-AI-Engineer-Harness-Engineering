@@ -54,10 +54,10 @@ The tools are the surface area through which the model can act. Writing the sche
 
 ### Instructions
 
-- [ ] In `starter/claims_intake/tools.py`, populate `TOOL_SCHEMAS` with the four schemas above.
-- [ ] Implement `_err` and `_ok` so they return the right JSON shape.
-- [ ] Implement `_t_lookup_policy`, `_t_record_claim_fact`, `_t_classify_claim`, `_t_assess_severity`. Each validates its input and returns a graceful error on bad input.
-- [ ] In `starter/tests/test_antipatterns.py`, write the four AST tests (the file has detailed TODO comments naming the heuristic for each).
+- [x] In `starter/claims_intake/tools.py`, populate `TOOL_SCHEMAS` with the four schemas above.
+- [x] Implement `_err` and `_ok` so they return the right JSON shape.
+- [x] Implement `_t_lookup_policy`, `_t_record_claim_fact`, `_t_classify_claim`, `_t_assess_severity`. Each validates its input and returns a graceful error on bad input.
+- [x] In `starter/tests/test_antipatterns.py`, write the four AST tests (the file has detailed TODO comments naming the heuristic for each).
 
 ### Verify
 
