@@ -1,0 +1,19 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "input_tokens": 39209,
+  "output_tokens": 197,
+  "raw_output": {
+    "customer_id": "CUST-88421",
+    "refund_order_id": "ORD-77310",
+    "refund_amount_usd": 22.14,
+    "refund_status": "processed",
+    "subscription_id": "SUB-22119",
+    "subscription_plan": "Pantry Plus Monthly",
+    "subscription_cancel_reason": "duplicate_charge",
+    "subscription_status": "cancelled_with_prorated_refund",
+    "active_payment_method_last4": "4242",
+    "new_payment_method_last4": "7782",
+    "payment_update_failure_code": "AVS_MISMATCH",
+    "payment_update_status": "in_progress"
+  }
+}
