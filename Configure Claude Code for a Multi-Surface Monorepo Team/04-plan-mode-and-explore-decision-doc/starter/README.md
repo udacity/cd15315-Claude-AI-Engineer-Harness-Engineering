@@ -5,7 +5,7 @@ This starter carries everything from Exercise 3's solution plus a starter `docs/
 ## Files you will edit
 
 - `docs/plan-mode-vs-direct-execution.md` — five TODO blocks:
-  1. Knight-Webb citation block (sourced via the Module 8 curriculum doc's anchor-talks table — NOT the Architect's Playbook).
+  1. Knight-Webb citation block: name the speaker, the talk title, and the words "anchor talk".
   2. Section 1 — plan-mode example touching ≥3 files in `src/components/`, citing "prevent costly rework."
   3. Section 2 — direct-execution example targeting one function in `src/api/orders/handler.ts`.
   4. Section 3 — Explore sub-agent example with the scratchpad-pattern reference.

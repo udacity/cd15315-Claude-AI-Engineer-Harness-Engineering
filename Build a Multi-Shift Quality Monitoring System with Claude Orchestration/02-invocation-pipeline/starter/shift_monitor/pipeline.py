@@ -7,7 +7,7 @@ import logging
 import re
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +16,8 @@ from .invocation import rich
 from .scratchpad import Scratchpad, ScratchpadEntry
 from .state import HOT_STATE_BYTE_BUDGET, MAX_RECENT_HASHES, HotState
 from .warm import WarmStore
+
+UTC = timezone.utc
 
 log = logging.getLogger(__name__)
 

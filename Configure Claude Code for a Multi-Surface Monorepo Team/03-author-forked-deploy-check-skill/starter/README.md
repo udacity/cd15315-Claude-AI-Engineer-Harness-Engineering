@@ -23,5 +23,5 @@ Replace each TODO until pytest reports `28 passed` and the CLI prints `OK`.
 
 ## Troubleshooting
 
-- **IDE LSP warning on `context: fork` or `allowed-tools`** — the current Claude Code skill-frontmatter LSP (2026-05) hasn't caught up to the exam-tested schema. The warning is informational, not an error. Proceed.
+- **IDE LSP warning on `context: fork` or `allowed-tools`** — the current Claude Code skill-frontmatter LSP (2026-05) hasn't caught up to the current skill-frontmatter schema. The warning is informational, not an error. Proceed.
 - **Frontmatter fails to load with a "nested mapping" error** — quote any value containing a colon: `argument-hint: "[target] (defaults to main)"`, not `argument-hint: <target: optional>`.

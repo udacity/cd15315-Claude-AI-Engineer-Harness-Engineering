@@ -42,7 +42,7 @@ module-05-capstone-harness-engineering/   ← you are here
 
 ## Prerequisites
 
-- **Python 3.11+**
+- **Python 3.10+**
 - **A Claude API key** exported as `ANTHROPIC_API_KEY`. Systems 1, 2, and 4 call the real Claude API. System 3's validator does not require the API.
   > ⚠️ Running all four systems against the live API costs roughly **$1–$5 total** on the default Haiku/Sonnet models. System 4 can be run fully offline with `--recorded-response` if you want to avoid any spend on that one.
 - **git** and a terminal (macOS, Linux, or WSL on Windows).

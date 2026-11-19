@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import hashlib
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from shift_monitor import fork
 from shift_monitor.scratchpad import Scratchpad, ScratchpadEntry
 from shift_monitor.state import HotState
+
+UTC = timezone.utc
 
 
 def _baseline_hot_state(path: Path) -> HotState:

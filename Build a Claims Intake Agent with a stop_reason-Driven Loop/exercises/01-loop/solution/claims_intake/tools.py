@@ -2,7 +2,7 @@
 
 Seven tools, registered with Anthropic tool-use shape. The dispatcher returns
 serialized JSON strings to be wrapped as `tool_result` content. Errors follow
-the Playbook "Graceful Tool Failure" shape:
+the "Graceful Tool Failure" shape:
 
     {"is_error": true,
      "error_category": "transient"|"permanent",

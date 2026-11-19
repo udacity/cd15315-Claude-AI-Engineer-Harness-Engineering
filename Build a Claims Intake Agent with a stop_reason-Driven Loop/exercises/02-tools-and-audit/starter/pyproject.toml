@@ -2,7 +2,7 @@
 name = "claims_intake"
 version = "0.1.0"
 description = "Insurance Claims Intake Agent — Module 1 solution"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "anthropic==0.39.0",
     "httpx<0.28",
@@ -19,7 +19,7 @@ dev = [
 include = ["claims_intake*"]
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.10"
 strict = true
 warn_unused_ignores = true
 disallow_any_generics = true
@@ -31,7 +31,7 @@ ignore_missing_imports = true
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM"]

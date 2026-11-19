@@ -34,10 +34,10 @@ REQUIRED_FIELDS: tuple[str, ...] = ()
 # TODO (Exercise 2): Replace with a dataclass that carries the 12 fields above
 # with explicit Python types (str for IDs / status tokens / last4 strings,
 # float for refund_amount_usd). Then implement to_markdown(self) -> str so the
-# block renders with a level-1 `# Case Facts` header and the three subgroups
+# block renders with a level-1 `# Case Facts` header and the four groups
 # (Customer / Refund (resolved) / Subscription (resolved) / Payment update
 # (active)) as bold inline labels. The rendering is part of the contract:
-# fixed key order, Markdown headers, reviewer-readable.
+# fixed key order, bold group labels, reviewer-readable.
 @dataclass
 class CaseFacts:
     def to_markdown(self) -> str:

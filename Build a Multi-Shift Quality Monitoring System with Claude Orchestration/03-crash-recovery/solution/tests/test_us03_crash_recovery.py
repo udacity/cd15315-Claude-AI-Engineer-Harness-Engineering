@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import UTC, datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -13,6 +13,8 @@ from shift_monitor.invocation import resumed
 from shift_monitor.manifest import Manifest, ManifestState, Step
 from shift_monitor.recovery import STALE_RESUME_THRESHOLD_MINUTES
 from shift_monitor.warm import WarmStore
+
+UTC = timezone.utc
 
 
 def _make_step(name: str, when: datetime, shape: str = "rich") -> Step:
