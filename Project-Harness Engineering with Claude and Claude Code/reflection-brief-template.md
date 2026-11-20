@@ -18,10 +18,10 @@ Replace each `→` with your answer. **Every answer cites at least one artifact 
 ### System 1 — Agentic loop
 
 1. **Loop control.** Quote the `stop_reason` sequence from one trace. Name the file and function that decides continue-vs-stop, and how.
-   → 
+   → In `evidence/system-1/traces-20261119_111636/claim_05_auto_collision.jsonl`, the observed sequence is `tool_use -> tool_use -> tool_use -> end_turn`. In `claims_intake/loop.py`, `run()` continues on `tool_use`, returns on `end_turn`, and raises on any other stop reason. The trace shows three tool-use turns followed by normal termination.
 
 2. **Anti-pattern.** Name one anti-pattern `test_antipatterns.py` checks for. What would break in your run if the loop used it?
-   → 
+   → `test_antipatterns.py` rejects natural-language string-membership control flow and integer-literal iteration caps as the loop’s primary stop condition. Such logic could stop before the model’s terminal response or ignore the actual `stop_reason`; claim 5’s four-turn trace shows why the loop must follow the response sequence rather than a fixed cap.
 
 3. **Tool design.** Pick two tools with overlapping inputs. How do the descriptions prevent misrouting? What did a structured tool error let the agent do that a generic string would not?
    → 
@@ -57,10 +57,10 @@ Replace each `→` with your answer. **Every answer cites at least one artifact 
     → 
 
 12. **Crash recovery.** The resume-vs-fresh decision and its staleness threshold (`recovery.py`). Why is a fresh start with an injected summary sometimes more reliable than resuming?
-    → 
+    → `recovery.py` resumes only an incomplete run whose latest step is within `STALE_RESUME_THRESHOLD_MINUTES = 30`; an empty, completed, or stale manifest starts fresh. A fresh start avoids carrying forward stale partial state and can use recorded findings as a summary. The recovery truth-table and 30-minute threshold are covered by the System 4 tests.
 
 13. **Small state.** Byte size of your `hot_state.json`. Why does the budget matter for a system run once per shift, indefinitely?
-    → 
+    → `evidence/system-4/hot_state-vocareum.json` is 965 bytes, below the 5,120-byte budget enforced by `state.py`. Keeping hot state bounded prevents each shift’s prompt state from growing indefinitely while the warm SQLite database retains history. `evidence/system-4/shift-run-vocareum.txt` records the run’s 17 new SQL-filtered defects.
 
 ---
 
