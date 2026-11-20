@@ -1,0 +1,11 @@
+warm_total= 40
+since=2026-04-01T00:00:00Z
+filtered_count= 17
+query= SELECT * FROM defects WHERE ts > ? ORDER BY ts DESC LIMIT ?
+query_plan= ['SEARCH defects USING INDEX idx_defects_ts (ts>?)']
+sample_rows=
+{"component": "pressure-sensor-PS-22", "description": "Sensor failed self-test at startup, recovered after power cycle. Logged for trending.", "id": "DEF-20260421-001", "severity": "low", "shift": "C", "ts": "2026-04-21T04:07:18Z"}
+{"component": "rotor-coil-RC-8", "description": "Hi-pot test failure at 2.5 kV, breakdown to ground through slot insulation. Coil tagged for teardown analysis.", "id": "DEF-20260423-001", "severity": "high", "shift": "A", "ts": "2026-04-23T10:34:52Z"}
+{"component": "welder-W-9", "description": "Argon flow rate fluctuated between 14 and 16 L/min, setpoint 15. Regulator diaphragm suspected.", "id": "DEF-20260425-001", "severity": "low", "shift": "B", "ts": "2026-04-25T20:51:09Z"}
+{"component": "capacitor-bank-C-7", "description": "Internal short circuit detected during final QA; impedance dropped to 0.08 ohm from expected 4.5 ohm. Unit segregated for destructive analysis.", "id": "DEF-20260427-001", "severity": "critical", "shift": "C", "ts": "2026-04-27T01:19:46Z"}
+{"component": "coolant-loop-CL-5", "description": "Pinhole leak identified at elbow joint upstream of pump P-2, drip rate approximately 1 drop per minute. Temporary clamp applied, weld repair scheduled.", "id": "DEF-20260429-001", "severity": "medium", "shift": "A", "ts": "2026-04-29T12:05:28Z"}
